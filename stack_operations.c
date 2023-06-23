@@ -19,6 +19,7 @@ void push(stack_t **stack, unsigned int line_number, const char *n)
 	num = is_number(n);
 	if (num == -1)
 	{
+		printf("L%u: usage: push integer\n", line_number);
 		free_list(stack);
 		exit(EXIT_FAILURE);
 	}
